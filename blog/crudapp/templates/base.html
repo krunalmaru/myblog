@@ -9,16 +9,24 @@
 
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark shadow-5">
         <div class="container">
           <a class="navbar-brand text-light" href="#">Blog</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-            </div>
+            <ul class="navbar-nav">
+                <li class="navbar-nav">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="navbar-nav ml-5 mx-2">
+                    <a class="nav-link btn btn-success text-light" aria-current="page" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="navbar-nav ml-4">
+                    <a class="nav-link btn btn-success text-light" aria-current="page" href="{% url 'register' %}">Registration</a>
+                </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -27,7 +35,7 @@
 
     {% endblock %}
 
-    
+
     <footer class="bg-dark p-3">
         <p class="text-center text-white">All Rights Reserved Blog </p>
     </footer>
